@@ -55,6 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bill.cs">
+      <DependentUpon>Pharmacy.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bills.Designer.cs">
+      <DependentUpon>Bills.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bills.resx">
+      <DependentUpon>Bills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +113,7 @@
     <None Include="Pharmacy.edmx.diagram">
       <DependentUpon>Pharmacy.edmx</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\bill.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\pharmacist.datasource" />
     <None Include="Properties\DataSources\Pharmacy.Properties.Resources.datasource" />

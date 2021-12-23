@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="f4d39b5ccbf1475396c5d5f64bffe763" Name="Diagram1">
         <EntityTypeShape EntityType="PharmacyModel.pharmacist" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyModel.bill" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

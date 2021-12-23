@@ -34,6 +34,7 @@ namespace Pharmacy
             this.text1 = new System.Windows.Forms.TextBox();
             this.City = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Bills = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +85,16 @@ namespace Pharmacy
             this.dataGridView.Size = new System.Drawing.Size(425, 219);
             this.dataGridView.TabIndex = 3;
             // 
+            // Bills
+            // 
+            this.Bills.Location = new System.Drawing.Point(35, 473);
+            this.Bills.Name = "Bills";
+            this.Bills.Size = new System.Drawing.Size(177, 67);
+            this.Bills.TabIndex = 4;
+            this.Bills.Text = "button2";
+            this.Bills.UseVisualStyleBackColor = true;
+            this.Bills.Click += new System.EventHandler(this.button2_Click);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -117,6 +128,7 @@ namespace Pharmacy
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 582);
+            this.Controls.Add(this.Bills);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.City);
             this.Controls.Add(this.text1);
@@ -140,6 +152,7 @@ namespace Pharmacy
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource pharmacistBindingSource;
+        private System.Windows.Forms.Button Bills;
     }
 }
 

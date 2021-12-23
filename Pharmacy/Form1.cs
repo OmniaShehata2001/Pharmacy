@@ -36,6 +36,12 @@ namespace Pharmacy
             dataGridView.DataSource = db.pharmacists.ToList();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Bills bills = new Bills();
+            
+            bills.Show();
+            this.Hide();
+        }
     }
 }
