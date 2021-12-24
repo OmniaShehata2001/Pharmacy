@@ -39,6 +39,10 @@ namespace Pharmacy
             MedicineName.Text = " ";
         }
 
-        
+        private void Back_Click(object sender, EventArgs e)
+        {
+            new DashBoard().Show();
+            this.Hide();
+        }
     }
 }
