@@ -16,11 +16,18 @@ namespace Pharmacy
         public ViewSelles()
         {
             InitializeComponent();
+            DateGrid.DataSource = db.bills.ToList();
         }
 
         private void Search(object sender, EventArgs e)
         {
             DateGrid.DataSource = db.bills.Where(x => x.billDate.Value == DateSearch.Value).ToList();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new DashBoard().Show();
+            this.Hide();
         }
     }
 }

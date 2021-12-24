@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="PharmacyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="password" Type="varchar(max)" />
+        </EntityType>
         <EntityType Name="bill">
           <Key>
             <PropertyRef Name="Id" />
@@ -33,9 +41,12 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar(max)" />
-          <Property Name="City" Type="varchar(max)" />
+          <Property Name="ADDRESS" Type="varchar" MaxLength="255" />
+          <Property Name="AGE" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityContainer Name="PharmacyModelStoreContainer">
+          <EntitySet Name="account" EntityType="Self.account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bill" EntityType="Self.bill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Medicine" EntityType="Self.Medicine" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pharmacist" EntityType="Self.pharmacist" Schema="dbo" store:Type="Tables" />
@@ -50,12 +61,15 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AGE" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="PharmacyEntity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="pharmacists" EntityType="Self.pharmacist" />
           <EntitySet Name="bills" EntityType="PharmacyModel.bill" />
           <EntitySet Name="Medicines" EntityType="PharmacyModel.Medicine" />
+          <EntitySet Name="accounts" EntityType="PharmacyModel.account" />
         </EntityContainer>
         <EntityType Name="bill">
           <Key>
@@ -79,6 +93,14 @@
           <Property Name="MGS" Type="DateTime" Precision="3" />
           <Property Name="expire" Type="DateTime" Precision="3" />
         </EntityType>
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -88,9 +110,11 @@
           <EntitySetMapping Name="pharmacists">
             <EntityTypeMapping TypeName="PharmacyModel.pharmacist">
               <MappingFragment StoreEntitySet="pharmacist">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="City" ColumnName="City" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -115,6 +139,15 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="accounts">
+            <EntityTypeMapping TypeName="PharmacyModel.account">
+              <MappingFragment StoreEntitySet="account">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

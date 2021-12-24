@@ -55,6 +55,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="account.cs">
+      <DependentUpon>Pharmacy.tt</DependentUpon>
+    </Compile>
+    <Compile Include="add bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add bill.Designer.cs">
+      <DependentUpon>add bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPharmacist.Designer.cs">
+      <DependentUpon>AddPharmacist.cs</DependentUpon>
+    </Compile>
     <Compile Include="bill.cs">
       <DependentUpon>Pharmacy.tt</DependentUpon>
     </Compile>
@@ -63,6 +78,12 @@
     </Compile>
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Medicine.cs">
       <DependentUpon>Pharmacy.tt</DependentUpon>
@@ -105,8 +126,17 @@
     <Compile Include="ViewSelles.Designer.cs">
       <DependentUpon>ViewSelles.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="add bill.resx">
+      <DependentUpon>add bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPharmacist.resx">
+      <DependentUpon>AddPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedicineForm.resx">
       <DependentUpon>MedicineForm.cs</DependentUpon>

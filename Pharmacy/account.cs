@@ -12,12 +12,10 @@ namespace Pharmacy
     using System;
     using System.Collections.Generic;
     
-    public partial class pharmacist
+    public partial class account
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string ADDRESS { get; set; }
-        public Nullable<int> AGE { get; set; }
+        public int ID { get; set; }
         public string Email { get; set; }
+        public string password { get; set; }
     }
 }

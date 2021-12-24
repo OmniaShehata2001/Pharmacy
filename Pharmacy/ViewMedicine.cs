@@ -30,7 +30,14 @@ namespace Pharmacy
 
         private void TextChange(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.Medicines.Where(x => x.Name.Contains(SearchBox.Text.Trim())).ToList();
+            if (SearchBox.Text.Equals(""))
+            {
+                dataGridView1.DataSource = db.Medicines.ToList();
+            }
+            else
+            {
+                dataGridView1.DataSource = db.Medicines.Where(x => x.Name.Contains(SearchBox.Text.Trim())).ToList();
+            }
         }
 
         private void Add_Click(object sender, EventArgs e)

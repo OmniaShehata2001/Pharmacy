@@ -30,14 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DateGrid = new System.Windows.Forms.DataGridView();
-            this.billBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.billDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateSearch = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DateGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,12 +61,8 @@
             this.DateGrid.Name = "DateGrid";
             this.DateGrid.RowHeadersWidth = 51;
             this.DateGrid.RowTemplate.Height = 24;
-            this.DateGrid.Size = new System.Drawing.Size(811, 53);
+            this.DateGrid.Size = new System.Drawing.Size(811, 146);
             this.DateGrid.TabIndex = 0;
-            // 
-            // billBindingSource
-            // 
-            this.billBindingSource.DataSource = typeof(Pharmacy.bill);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -113,19 +112,57 @@
             this.billDateDataGridViewTextBoxColumn.Name = "billDateDataGridViewTextBoxColumn";
             this.billDateDataGridViewTextBoxColumn.Width = 125;
             // 
+            // billBindingSource
+            // 
+            this.billBindingSource.DataSource = typeof(Pharmacy.bill);
+            // 
             // DateSearch
             // 
-            this.DateSearch.Location = new System.Drawing.Point(355, 83);
+            this.DateSearch.Location = new System.Drawing.Point(356, 115);
             this.DateSearch.Name = "DateSearch";
             this.DateSearch.Size = new System.Drawing.Size(200, 22);
             this.DateSearch.TabIndex = 1;
             this.DateSearch.ValueChanged += new System.EventHandler(this.Search);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(250, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(349, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 38);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "View Selles";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(356, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 38);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Back to dashboard";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ViewSelles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 457);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DateSearch);
             this.Controls.Add(this.DateGrid);
             this.Name = "ViewSelles";
@@ -133,6 +170,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DateGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,5 +185,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn billDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource billBindingSource;
         private System.Windows.Forms.DateTimePicker DateSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

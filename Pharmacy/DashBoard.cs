@@ -25,12 +25,14 @@ namespace Pharmacy
 
         private void AddPharma_Click(object sender, EventArgs e)
         {
-
+            new AddPharmacistForm().Show();
+            this.Hide();
         }
 
         private void addBill_Click(object sender, EventArgs e)
         {
-
+            new add_bill().Show();
+            this.Hide();
         }
 
         private void ViewMedicine_Click(object sender, EventArgs e)
