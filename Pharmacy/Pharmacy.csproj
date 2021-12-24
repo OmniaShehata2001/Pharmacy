@@ -58,23 +58,11 @@
     <Compile Include="bill.cs">
       <DependentUpon>Pharmacy.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bills.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bills.Designer.cs">
-      <DependentUpon>Bills.cs</DependentUpon>
-    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Medicine.cs">
       <DependentUpon>Pharmacy.tt</DependentUpon>
@@ -111,14 +99,8 @@
     <Compile Include="ViewMedicine.Designer.cs">
       <DependentUpon>ViewMedicine.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Bills.resx">
-      <DependentUpon>Bills.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedicineForm.resx">
       <DependentUpon>MedicineForm.cs</DependentUpon>

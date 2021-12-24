@@ -10,14 +10,11 @@ using System.Windows.Forms;
 
 namespace Pharmacy
 {
-
-    public partial class Bills : Form
+    public partial class ViewSelles : Form
     {
-        PharmacyEntity db = new PharmacyEntity();
-        public Bills()
+        public ViewSelles()
         {
             InitializeComponent();
-            BillsGrid.DataSource = db.bills.ToList();
         }
     }
 }
