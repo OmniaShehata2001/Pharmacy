@@ -12,9 +12,15 @@ namespace Pharmacy
 {
     public partial class ViewSelles : Form
     {
+        PharmacyEntity db = new PharmacyEntity();
         public ViewSelles()
         {
             InitializeComponent();
+        }
+
+        private void Search(object sender, EventArgs e)
+        {
+            DateGrid.DataSource = db.bills.Where(x => x.billDate.Value == DateSearch.Value).ToList();
         }
     }
 }

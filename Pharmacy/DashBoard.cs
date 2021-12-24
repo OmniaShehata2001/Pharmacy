@@ -41,7 +41,8 @@ namespace Pharmacy
 
         private void ViewSelles_Click(object sender, EventArgs e)
         {
-
+            new ViewSelles().Show();
+            this.Hide();
         }
     }
 }

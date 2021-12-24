@@ -16,5 +16,9 @@ namespace Pharmacy
     {
         public int Id { get; set; }
         public Nullable<decimal> balance { get; set; }
+        public string ProductName { get; set; }
+        public Nullable<decimal> Discount { get; set; }
+        public Nullable<decimal> Quantity { get; set; }
+        public Nullable<System.DateTime> billDate { get; set; }
     }
 }
