@@ -35,7 +35,8 @@ namespace Pharmacy
 
         private void ViewMedicine_Click(object sender, EventArgs e)
         {
-
+            new ViewMedicine().Show();
+            this.Hide();
         }
 
         private void ViewSelles_Click(object sender, EventArgs e)
