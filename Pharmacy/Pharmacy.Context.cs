@@ -27,5 +27,6 @@ namespace Pharmacy
     
         public virtual DbSet<pharmacist> pharmacists { get; set; }
         public virtual DbSet<bill> bills { get; set; }
+        public virtual DbSet<Medicine> Medicines { get; set; }
     }
 }

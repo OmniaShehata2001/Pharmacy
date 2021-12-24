@@ -12,6 +12,17 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="balance" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
+        <EntityType Name="Medicine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="MGS" Type="datetime" />
+          <Property Name="expire" Type="datetime" />
+        </EntityType>
         <EntityType Name="pharmacist">
           <Key>
             <PropertyRef Name="Id" />
@@ -22,6 +33,7 @@
         </EntityType>
         <EntityContainer Name="PharmacyModelStoreContainer">
           <EntitySet Name="bill" EntityType="Self.bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medicine" EntityType="Self.Medicine" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pharmacist" EntityType="Self.pharmacist" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -39,6 +51,7 @@
         <EntityContainer Name="PharmacyEntity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="pharmacists" EntityType="Self.pharmacist" />
           <EntitySet Name="bills" EntityType="PharmacyModel.bill" />
+          <EntitySet Name="Medicines" EntityType="PharmacyModel.Medicine" />
         </EntityContainer>
         <EntityType Name="bill">
           <Key>
@@ -46,6 +59,17 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="balance" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Medicine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="MGS" Type="DateTime" Precision="3" />
+          <Property Name="expire" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -66,6 +90,18 @@
             <EntityTypeMapping TypeName="PharmacyModel.bill">
               <MappingFragment StoreEntitySet="bill">
                 <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medicines">
+            <EntityTypeMapping TypeName="PharmacyModel.Medicine">
+              <MappingFragment StoreEntitySet="Medicine">
+                <ScalarProperty Name="expire" ColumnName="expire" />
+                <ScalarProperty Name="MGS" ColumnName="MGS" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
