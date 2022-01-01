@@ -51,5 +51,66 @@ namespace Pharmacy
             new DashBoard().Show();
             this.Hide();
         }
+
+        private void Buy_Click(object sender, EventArgs e)
+        {
+            if (SearchBox.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("No data Entered");
+            }
+            var ids =  db.Medicines.Where(x => x.Name.Contains(SearchBox.Text.Trim())).ToList().Select(x=>x.Id);
+            var medicines = db.Medicines.Where(x => ids.Contains(x.Id)).ToList();
+            bool cont  = true;
+            medicines.ForEach(x => 
+            {
+                if (x.Quantity <= 0)
+                {
+                    MessageBox.Show("you Choose Items We Don't have.");
+                    cont = false;
+                }
+            });
+            if (cont)
+            {
+                medicines.ForEach(x =>
+                {
+                    if (x.Quantity > 0)
+                    {
+                        x.Quantity--;
+                    }
+
+                });
+                db.SaveChanges();
+            }
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            if (SearchBox.Text.Equals(""))
+            {
+                dataGridView1.DataSource = db.Medicines.ToList();
+            }
+            else
+            {
+                dataGridView1.DataSource = db.Medicines.Where(x => x.Name.Contains(SearchBox.Text.Trim())).ToList();
+            }
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            if (SearchBox.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("No data Entered");
+            }
+            var ids = db.Medicines.Where(x => x.Name.Contains(SearchBox.Text.Trim())).ToList().Select(x => x.Id);
+            var medicines = db.Medicines.Where(x => ids.Contains(x.Id)).ToList();
+
+
+            medicines.ForEach(x =>
+            {
+                x.Quantity++;
+
+            });
+            db.SaveChanges();
+        }
     }
 }

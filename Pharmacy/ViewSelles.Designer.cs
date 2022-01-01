@@ -57,7 +57,7 @@
             this.quantityDataGridViewTextBoxColumn,
             this.billDateDataGridViewTextBoxColumn});
             this.DateGrid.DataSource = this.billBindingSource;
-            this.DateGrid.Location = new System.Drawing.Point(50, 163);
+            this.DateGrid.Location = new System.Drawing.Point(274, 258);
             this.DateGrid.Name = "DateGrid";
             this.DateGrid.RowHeadersWidth = 51;
             this.DateGrid.RowTemplate.Height = 24;
@@ -118,7 +118,7 @@
             // 
             // DateSearch
             // 
-            this.DateSearch.Location = new System.Drawing.Point(356, 115);
+            this.DateSearch.Location = new System.Drawing.Point(562, 108);
             this.DateSearch.Name = "DateSearch";
             this.DateSearch.Size = new System.Drawing.Size(200, 22);
             this.DateSearch.TabIndex = 1;
@@ -128,7 +128,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 108);
+            this.label1.Location = new System.Drawing.Point(419, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 29);
             this.label1.TabIndex = 2;
@@ -138,16 +138,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(349, 20);
+            this.label2.Location = new System.Drawing.Point(565, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "View Selles";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(356, 336);
+            this.button1.Location = new System.Drawing.Point(552, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(235, 38);
             this.button1.TabIndex = 4;
@@ -159,7 +160,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 457);
+            this.BackgroundImage = global::Pharmacy.Properties.Resources.pexels_karolina_grabowska_4210611__1_;
+            this.ClientSize = new System.Drawing.Size(1428, 705);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

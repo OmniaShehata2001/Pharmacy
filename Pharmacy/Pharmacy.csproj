@@ -149,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ViewMedicine.resx">
       <DependentUpon>ViewMedicine.cs</DependentUpon>
@@ -199,6 +200,14 @@
       <DependentUpon>Pharmacy.edmx</DependentUpon>
       <LastGenOutput>Pharmacy.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\pexels-anna-shvets-36830881.jpg" />
+    <None Include="Resources\pexels-anna-shvets-3683088.jpg" />
+    <None Include="Resources\pexels-karolina-grabowska-4226773.jpg" />
+    <None Include="Resources\pexels-karolina-grabowska-4210611 %281%29.jpg" />
+    <None Include="Resources\pexels-alena-shekhovtcova-60749141.jpg" />
+    <None Include="Resources\pexels-alena-shekhovtcova-6074914.jpg" />
+    <None Include="Resources\pexels-miguel-á-padriñán-28825661.jpg" />
+    <None Include="Resources\pexels-miguel-á-padriñán-2882566.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

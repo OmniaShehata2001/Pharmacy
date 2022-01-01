@@ -33,6 +33,9 @@ namespace Pharmacy
             }
         }
 
-       
+        private void mail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

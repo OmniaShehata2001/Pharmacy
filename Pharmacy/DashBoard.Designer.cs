@@ -40,7 +40,7 @@ namespace Pharmacy
             // Medicine
             // 
             this.Medicine.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Medicine.Location = new System.Drawing.Point(423, 114);
+            this.Medicine.Location = new System.Drawing.Point(619, 208);
             this.Medicine.Name = "Medicine";
             this.Medicine.Size = new System.Drawing.Size(255, 37);
             this.Medicine.TabIndex = 0;
@@ -54,9 +54,9 @@ namespace Pharmacy
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(440, 25);
+            this.label1.Location = new System.Drawing.Point(642, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 39);
+            this.label1.Size = new System.Drawing.Size(190, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "DashBoard";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,7 +64,7 @@ namespace Pharmacy
             // AddPharma
             // 
             this.AddPharma.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.AddPharma.Location = new System.Drawing.Point(423, 191);
+            this.AddPharma.Location = new System.Drawing.Point(619, 306);
             this.AddPharma.Name = "AddPharma";
             this.AddPharma.Size = new System.Drawing.Size(255, 39);
             this.AddPharma.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace Pharmacy
             // ViewMedicine
             // 
             this.ViewMedicine.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ViewMedicine.Location = new System.Drawing.Point(423, 310);
+            this.ViewMedicine.Location = new System.Drawing.Point(619, 509);
             this.ViewMedicine.Name = "ViewMedicine";
             this.ViewMedicine.Size = new System.Drawing.Size(255, 39);
             this.ViewMedicine.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace Pharmacy
             // ViewSelles
             // 
             this.ViewSelles.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ViewSelles.Location = new System.Drawing.Point(423, 380);
+            this.ViewSelles.Location = new System.Drawing.Point(619, 611);
             this.ViewSelles.Name = "ViewSelles";
             this.ViewSelles.Size = new System.Drawing.Size(255, 39);
             this.ViewSelles.TabIndex = 4;
@@ -97,7 +97,7 @@ namespace Pharmacy
             // addBill
             // 
             this.addBill.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addBill.Location = new System.Drawing.Point(423, 249);
+            this.addBill.Location = new System.Drawing.Point(619, 409);
             this.addBill.Name = "addBill";
             this.addBill.Size = new System.Drawing.Size(255, 39);
             this.addBill.TabIndex = 5;
@@ -109,7 +109,8 @@ namespace Pharmacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 603);
+            this.BackgroundImage = global::Pharmacy.Properties.Resources.pexels_alena_shekhovtcova_6074914;
+            this.ClientSize = new System.Drawing.Size(1450, 799);
             this.Controls.Add(this.addBill);
             this.Controls.Add(this.ViewSelles);
             this.Controls.Add(this.ViewMedicine);

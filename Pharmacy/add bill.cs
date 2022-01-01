@@ -45,6 +45,14 @@ namespace Pharmacy
             Date.Value = DateTime.Now;
         }
 
-       
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Quantity_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

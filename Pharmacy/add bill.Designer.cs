@@ -50,7 +50,7 @@ namespace Pharmacy
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(307, 28);
+            this.label1.Location = new System.Drawing.Point(539, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 45);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace Pharmacy
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 108);
+            this.label2.Location = new System.Drawing.Point(333, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 29);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace Pharmacy
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 159);
+            this.label3.Location = new System.Drawing.Point(333, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(169, 31);
             this.label3.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace Pharmacy
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(102, 222);
+            this.label4.Location = new System.Drawing.Point(333, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 29);
             this.label4.TabIndex = 3;
@@ -88,32 +88,34 @@ namespace Pharmacy
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(93, 275);
+            this.label5.Location = new System.Drawing.Point(333, 317);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 42);
             this.label5.TabIndex = 4;
             this.label5.Text = "Discount";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Quantity
             // 
             this.Quantity.AutoSize = true;
             this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quantity.Location = new System.Drawing.Point(102, 321);
+            this.Quantity.Location = new System.Drawing.Point(333, 409);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(100, 29);
             this.Quantity.TabIndex = 5;
             this.Quantity.Text = "Quantity";
+            this.Quantity.Click += new System.EventHandler(this.Quantity_Click);
             // 
             // Date
             // 
-            this.Date.Location = new System.Drawing.Point(308, 113);
+            this.Date.Location = new System.Drawing.Point(605, 137);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(200, 22);
             this.Date.TabIndex = 7;
             // 
             // Product
             // 
-            this.Product.Location = new System.Drawing.Point(308, 168);
+            this.Product.Location = new System.Drawing.Point(605, 195);
             this.Product.Name = "Product";
             this.Product.Size = new System.Drawing.Size(200, 22);
             this.Product.TabIndex = 8;
@@ -121,7 +123,7 @@ namespace Pharmacy
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(508, 379);
+            this.button1.Location = new System.Drawing.Point(1071, 633);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(280, 45);
             this.button1.TabIndex = 13;
@@ -132,7 +134,7 @@ namespace Pharmacy
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(107, 390);
+            this.button2.Location = new System.Drawing.Point(191, 644);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 34);
             this.button2.TabIndex = 14;
@@ -144,7 +146,7 @@ namespace Pharmacy
             // 
             this.Qunatity.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Qunatity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qunatity.Location = new System.Drawing.Point(308, 314);
+            this.Qunatity.Location = new System.Drawing.Point(605, 402);
             this.Qunatity.Name = "Qunatity";
             this.Qunatity.Size = new System.Drawing.Size(200, 36);
             this.Qunatity.TabIndex = 15;
@@ -153,7 +155,7 @@ namespace Pharmacy
             // 
             this.Price.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price.Location = new System.Drawing.Point(308, 207);
+            this.Price.Location = new System.Drawing.Point(605, 244);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(200, 36);
             this.Price.TabIndex = 16;
@@ -162,7 +164,7 @@ namespace Pharmacy
             // 
             this.Discount.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discount.Location = new System.Drawing.Point(308, 261);
+            this.Discount.Location = new System.Drawing.Point(605, 314);
             this.Discount.Name = "Discount";
             this.Discount.Size = new System.Drawing.Size(200, 36);
             this.Discount.TabIndex = 17;
@@ -171,7 +173,8 @@ namespace Pharmacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Pharmacy.Properties.Resources.pexels_karolina_grabowska_4226773;
+            this.ClientSize = new System.Drawing.Size(1452, 770);
             this.Controls.Add(this.Discount);
             this.Controls.Add(this.Price);
             this.Controls.Add(this.Qunatity);

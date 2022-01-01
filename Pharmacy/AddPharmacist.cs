@@ -42,5 +42,20 @@ namespace Pharmacy
             new DashBoard().Show();
             this.Hide();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddPharmacistForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

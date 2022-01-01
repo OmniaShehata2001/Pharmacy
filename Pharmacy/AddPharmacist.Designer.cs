@@ -47,7 +47,7 @@ namespace Pharmacy
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(294, 23);
+            this.label1.Location = new System.Drawing.Point(573, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 38);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace Pharmacy
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(341, 345);
+            this.add.Location = new System.Drawing.Point(89, 693);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(165, 46);
             this.add.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace Pharmacy
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(174, 102);
+            this.label2.Location = new System.Drawing.Point(354, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 36);
             this.label2.TabIndex = 2;
@@ -76,16 +76,17 @@ namespace Pharmacy
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(174, 160);
+            this.label3.Location = new System.Drawing.Point(354, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 34);
             this.label3.TabIndex = 3;
             this.label3.Text = "Email";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(176, 219);
+            this.label4.Location = new System.Drawing.Point(354, 404);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 30);
             this.label4.TabIndex = 4;
@@ -94,7 +95,7 @@ namespace Pharmacy
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(176, 285);
+            this.label5.Location = new System.Drawing.Point(369, 510);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 30);
             this.label5.TabIndex = 5;
@@ -102,7 +103,7 @@ namespace Pharmacy
             // 
             // Name
             // 
-            this.Name.Location = new System.Drawing.Point(325, 102);
+            this.Name.Location = new System.Drawing.Point(603, 192);
             this.Name.Multiline = true;
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(204, 36);
@@ -110,7 +111,7 @@ namespace Pharmacy
             // 
             // Address
             // 
-            this.Address.Location = new System.Drawing.Point(325, 214);
+            this.Address.Location = new System.Drawing.Point(612, 399);
             this.Address.Multiline = true;
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(204, 35);
@@ -118,15 +119,16 @@ namespace Pharmacy
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(325, 167);
+            this.Email.Location = new System.Drawing.Point(612, 285);
             this.Email.Multiline = true;
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(204, 27);
             this.Email.TabIndex = 8;
+            this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
             // 
             // Age
             // 
-            this.Age.Location = new System.Drawing.Point(325, 292);
+            this.Age.Location = new System.Drawing.Point(612, 518);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(204, 22);
             this.Age.TabIndex = 9;
@@ -134,7 +136,7 @@ namespace Pharmacy
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 23);
+            this.button1.Location = new System.Drawing.Point(1161, 700);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(237, 39);
             this.button1.TabIndex = 10;
@@ -146,7 +148,8 @@ namespace Pharmacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Pharmacy.Properties.Resources.pexels_anna_shvets_36830881;
+            this.ClientSize = new System.Drawing.Size(1436, 792);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Age);
             this.Controls.Add(this.Email);
@@ -158,7 +161,9 @@ namespace Pharmacy
             this.Controls.Add(this.label2);
             this.Controls.Add(this.add);
             this.Controls.Add(this.label1);
+            this.Name.Text = "AddPharmacistForm";
             this.Text = "AddPharmacistForm";
+            this.Load += new System.EventHandler(this.AddPharmacistForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Age)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
